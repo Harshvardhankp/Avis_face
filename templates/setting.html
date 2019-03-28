@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+.vertical-menu {
+  width: 200px;
+}
+
+.vertical-menu a {
+  background-color: #eee;
+  color: black;
+  display: block;
+  padding: 12px;
+  text-decoration: none;
+}
+
+.vertical-menu a:hover {
+  background-color: #ccc;
+}
+
+.vertical-menu a.active {
+  background-color: #4CAF50;
+  color: white;
+}
+</style>
+</head>
+<body>
+
+
+<div class="vertical-menu">
+  <a class="active">Settings</a>
+  <a href="{{ url_for('storagesetting')}}">Storage Settings</a>
+  <a href="{{ url_for('paintapp')}}">Vehicle Road line</a>
+   <a href="">Camera Settings</a>
+</div>
+
+<!-- /.container-fluid -->
+{% endblock %}

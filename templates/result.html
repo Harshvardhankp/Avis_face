@@ -1,0 +1,97 @@
+
+{% extends 'base.html' %}
+
+{% block content %}
+
+
+<style>
+ 	    #container2 {
+ 	    border:10px #333 solid;
+            margin: 0px ;
+            width: 1050px;
+            height: 800px;
+           
+		}
+
+            #container4 {
+            border:10px #0000 solid;
+            margin: 15px ;
+            width: 100px;
+            height: 300px;
+            background-color: ;
+            }
+
+            #hr,hr1,my_camera {
+            display: block;
+            margin-top: 0.0em;
+            margin-bottom: 0.0em;
+            margin-left:  auto;
+            margin-right: auto;
+            width:300px;
+            border: 10px;
+            border-style: inset;
+            border-width: 5px;
+            background-color: #336;
+
+            }
+
+            #heads{
+            width: auto;
+            height: auto;
+            border: 2px #333 solid;
+
+            }
+
+</style>
+
+
+   <div class="container">
+
+   <ol class="breadcrumb" >
+    <form  id="container2">
+
+    <div class="mx-auto"  >
+       <div id="container4">
+        <div class="form-group" >
+             <div class="row">
+<TABLE BORDER="5"    WIDTH="50%"   CELLPADDING="24" CELLSPACING="25" ALIGN="CENTER"  >
+   <TR>
+      <TH COLSPAN="10" align="right"><BR><H3 ALIGN="CENTER"><b>TASK STATUS TABLE</b></H3>
+    
+      </TH>
+   </TR>
+
+<TR  bgcolor="#FFFF00" ALIGN="CENTER">
+	<TH>Task id</TH>
+	<TH>Name</TH>
+	<TH>address</TH>
+	<TH>mobile</TH>
+ 	<TH>email</TH>
+      <TH>Alert Type</TH>
+      <TH>Status</TH>
+      <TH>Alerts</TH>
+     <TH>Location</TH>
+     <TH>Photo</TH>
+   </TR>
+
+{% for result in data %}
+ <TR ALIGN="CENTER">
+   <TD class="c1">{{result.id }}</TD>
+   <TD class="c2">{{result.name }}</TD>
+   <TD class="c3">{{result.address}}</TD>
+   <TD class="c4">{{result.mobile}}</TD>
+  <TD class="c5">{{result.email}}</TD>
+   <TD class="c6">User track</TD>	
+   <TD class="c7">Starting</TD>	
+   <TD class="c8">{{result.email}}</TD>	
+   <TD class="c10">cam</TD>
+   <TD class="c11">saved_loc</TD>			
+</TR>          
+{% endfor %}
+	
+</TABLE>
+</div>
+</div>
+
+<!-- /.container-fluid -->
+{% endblock %}

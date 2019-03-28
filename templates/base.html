@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Tensor Labs AVIS-FACE</title>
+
+    <!-- Bootstrap core CSS-->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template-->
+    <link href="/static/vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
+
+    <!-- Page level plugin CSS-->
+    <link href="/static/vendor/datatables/dataTables.bootstrap4.css" rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="/static/css/sb-admin.css" rel="stylesheet">
+
+  </head>
+<style>
+            #container {
+            margin: 0px ;
+            width: 120px;
+            height: 80px;
+            border: 5px #333 ;
+            background-color: #666;
+            }
+
+            #container1{
+            margin: 0px ;
+            width: 12px;
+            height: 80px;
+            border: 5px #333 ;
+            background-color: #666;
+            }
+
+.sidebar a {
+  display: block;
+  color: black;
+  padding: 16px;
+  text-decoration: none;
+}
+ 
+.sidebar a.active {
+
+  color: white;
+}
+</style>
+
+  <body id="page-top">
+
+    <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+      <img src="/static/logo.png"  width="200" hight="120" >
+
+      <!-- Navbar -->
+      <ul class="navbar-nav ml-auto ml-md-0">
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('index')}}">
+            <i class="fas fa-fw fa-tachometer-alt"></i>
+            <span>Dashboard</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('camview',viewname='Default')}}">
+            <i class="fas fa-play fa-report"></i>
+            <span>Live</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('camplay',viewname='Default')}}">
+            <i class="fas fa-video fa-report"></i>
+            <span>Play Back</span></a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="funcpagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-list-alt fa-folder"></i>
+            <span>Tasks</span>
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="funcpagesDropdown">
+
+            <a class="dropdown-item" href="{{ url_for('trackuser')}}">Track Users</a>
+	    <a class="dropdown-item" href="{{ url_for('Vehicletrack')}}">Track Vehicle</a>	
+
+          </div>
+        </li>
+
+	 <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="funcpagesDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-list-alt fa-folder"></i>
+            <span>Settings</span></a>
+	<div class="dropdown-menu" aria-labelledby="funcpagesDropdown">
+	<a  class="dropdown-item" href="{{ url_for('storagesetting')}}">Storage Settings</a>
+  	<a  class="dropdown-item" href="{{ url_for('paintapp')}}">Vehicle Road line</a>
+         <a  class="dropdown-item" href="{{ url_for('CamSettings')}}">Camera settings</a>
+
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('enrolluser')}}">
+            <i class="fas fa-bell fa-reports"></i>
+            <span>Enroll</span></a>
+            <hr>
+        </li>
+	<li class="nav-item">
+          <a class="nav-link" href="{{ url_for('face')}}">
+            <i class="fas fa-video fa-report"></i>
+            <span>VIDEO PROCESS</span></a>
+        </li>
+
+
+        <div>
+          {% block datecontent %}{% endblock %}
+        </div>
+        <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+        <div class="input-group">
+
+          </div>
+        </div>
+      </form>
+        <li class="nav-item dropdown no-arrow" >
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-user-circle fa-fw " align="right"></i>
+          </a>
+          <div class="dropdown-menu dropdown-menu-right pull-right" aria-labelledby="userDropdown">
+            <div class="dropdown-divider"></div>
+             <div class="dropdown-divider"></div>
+            <a class="dropdown-item" href="{{ url_for('help')}}">Help</a>
+
+            <div class="dropdown-divider"></div>
+
+            <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">Logout</a>
+          </div>
+        </li>
+      </ul>
+
+    </nav>
+
+    <div id="wrapper">
+
+      <!-- Sidebar -->
+      <ul class="sidebar navbar-nav">
+	        <hr>
+              <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+      </form>
+              {% block sidebarcontent %}{% endblock %}
+
+      </ul>
+        <div>
+        <!-- Template Code starts here -->
+        {% block content %}{% endblock %}
+        <!-- Template Code ends here -->
+        </div>
+
+        <!-- Sticky Footer -->
+        <footer class="sticky-footer">
+          <div class="container my-auto">
+            <div class="copyright text-center my-auto">
+              <span ><b>Copyright © Tensor Labs 2018</b></span>
+            </div>
+          </div>
+        </footer>
+
+      </div>
+      <!-- /.content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+    <!-- Scroll to Top Button-->
+    <a class="scroll-to-top rounded" href="#page-top">
+      <i class="fas fa-angle-up"></i>
+    </a>
+
+    <!-- Logout Modal-->
+    <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
+            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">×</span>
+            </button>
+          </div>
+          <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
+          <div class="modal-footer">
+            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+            <a class="btn btn-primary" href="{{ url_for('logout')}}">Logout</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="/static/vendor/jquery/jquery.min.js"></script>
+    <script src="/static/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>    <!-- Core plugin JavaScript-->
+    <script src="/static/vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- Custom scripts for all pages-->
+    <script src="/static/js/sb-admin.min.js"></script>
+
+  </body>
+
+</html>

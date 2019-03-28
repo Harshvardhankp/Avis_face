@@ -1,0 +1,130 @@
+{% extends 'base.html' %}
+
+
+{% block sidebarcontent %}
+
+ <!-- Breadcrumbs-->
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown2" role="button" data-toggle="dropdown"    aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Views</span>
+          </a>
+
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+               {% for view in camviews %}
+                 <a class="dropdown-item" href="{{ url_for('camview',viewname=view)}}">{{view}}</a>
+               {% endfor %}
+        </div>
+
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"    aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Server</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown">
+               {% for cam in cameras %}
+                 <a class="dropdown-item" href="{{ url_for('viewsinglecam',camname=cam)}}">{{cam}}</a>
+               {% endfor %}
+
+
+          </div>
+        </li>
+
+{% endblock %}
+
+{% block content %}
+ <!-- Breadcrumbs-->
+    <style>
+            #container {
+            margin: 5px ;
+            width: 270px;
+            height: 270px;
+            border: 10px #333 solid;
+            background-color: #666;
+            }
+            #container2,container3 {
+            margin: 0px ;
+            width: 270px;
+            height: 210px;
+            border: 10px #333 solid;
+            background-color: #333;
+            }
+
+            # hr,hr1 {
+            display: block;
+            margin-top: 0.0em;
+            margin-bottom: 0.0em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 5px;
+            background-color: #666;
+            }
+
+
+            </style>
+   <script>
+        $(document).ready(function(){
+        var vid = document.getElementById("landing-video");
+        vid.onplay = function() {
+            var source=vid.currentSrc;
+            folder = source.match(/(.+)(\/)/);
+            ext = source.match(/(\.\w+)$/);
+        };
+
+        vid.onended = function() {
+          $("#landing-video").attr({
+            "src":folder[0]+"video-2"+ext[0],
+            "loop":""
+          });
+        };
+    });
+
+   </script>
+
+    <div>
+       <hr >
+        <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+            <div>
+
+            <form id="form">
+                    <label  for="start">Start</label>
+                    &nbsp<input type="date" id="start" name="trip" value="2018-07-22"   min="2018-01-01" max="2018-12-31" />
+                    <label  for="start">End Date</label>
+                    &nbsp<input type="date" id="end" name="trip"  value="2018-07-22"  min="2018-01-01" max="2018-12-31" />
+                    <input type="time" id="appt-time" name="appt-time"   required />
+            </form>
+            </div>
+            <div>
+                &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" form="form" value="Submit">search</button>
+            </div>
+
+            <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+             <ul class="navbar-nav ml-auto ml-md-0">
+                 <li class="nav-item">
+            <div id="hr">
+            <span > <font color="white">View : {{NameView}}</font></span></a>
+            </div>
+
+        </li>
+      </ul>
+            </form>
+        </nav>
+        <ol class="breadcrumb">
+      <!-- Page Content -->
+           {% for viewcam in camlistforviews %}
+              <div id="container" >
+                   <small> <b> {{viewcam}}</b></small>
+                   <video src="/static/videos/CAM4/hist/2018/10/14/20181014002045.mp4" width="240" hight="160 "controls autoplay></video>
+
+               </div>
+           {% endfor %}
+
+          </ol>
+
+    </div>
+
+
+
+{% endblock %}

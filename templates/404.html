@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+
+     #container2 {
+            margin: 0px ;
+            width: 300px;
+            height: 250px;
+            border: 10px #333 solid;
+            background-color: #333;
+            }
+
+            #hr {
+            display: block;
+            margin-top: 0.3em;
+            margin-bottom: 0.3em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 5px;
+            background-color: #666;
+            }
+
+</style>
+
+    <div class="mx-auto"  >
+    <hr >
+      <font size="8" color="white">{{top}}</font>
+     <div id="container2">
+           <hr>
+           <font  color="white">{{msg}}</font>
+  </div>
+</div>
+
+
+
+<!-- /.container-fluid -->
+{% endblock %}

@@ -1,0 +1,169 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+            #container {
+            margin: 5px ;
+            width: 270px;
+            height: 220px;
+            border: 10px #333 solid;
+            background-color: #666;
+            }
+
+            #container2,container3 {
+            border:10px #333 solid;
+            margin: 0px ;
+            width: 800px;
+            height: 600px;
+            background-color: #333;
+            }
+
+            #hr,hr1,my_camera {
+            display: block;
+            margin-top: 0.0em;
+            margin-bottom: 0.0em;
+            margin-left:  auto;
+            margin-right: auto;
+            width:300px;
+            border: 10px;
+            border-style: inset;
+            border-width: 5px;
+            background-color: #336;
+
+            }
+
+            #heads{
+            width: auto;
+            height: auto;
+            border: 2px #333 solid;
+
+            }
+
+            </style>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.min.js"></script>
+
+
+
+
+<div class="container">
+
+ <ol class="breadcrumb" id="heads">
+     <div >
+         <b>Enroll User</b>
+     </div>
+  </ol>
+
+  <ol class="breadcrumb" >
+    <form method="POST"  id="container2" action="/enrolluser">
+
+        <div class="form-group" >
+             <div class="row">
+                      <div class="col-md-6">
+                            <input type="hidden" name="image" class="image-tag">
+                          <div ><b><font color="white">Snap View</font></b></div>
+
+                          <div id="results"><font color="white">Your captured image will appear here...</font></div>
+                        </div>
+
+                      <div class="col-md-6">
+                          <div ><b><font color="white">Cam View </font></b></div>
+                            <div id="my_camera"></div>
+                      </div>
+             </div>
+             <input type=button value="Take Snapshot" onClick="take_snapshot()">
+
+        </div>
+
+
+
+        <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="Name" required="required" autofocus="autofocus">
+                    <label for="name">First name</label>
+                  </div>
+                </div>
+              </div>
+        </div>
+        <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input type="text" id="mobile" name="mobile" class="form-control" placeholder="mobile" required="required">
+                    <label for="mobile">Mobile</label>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                <input type="email" id="email" name="email" class="form-control" placeholder="Email address" required="required">
+                <label for="email">Email address</label>
+              </div>
+                </div>
+              </div>
+            </div>
+        <div class="form-group">
+              <div class="form-row">
+                    <div class="col-md-6">
+                            <div class="form-label-group">
+                            <input type="text" id="address" name="address" class="form-control" placeholder="address" required="required">
+                            <label for="address">Address</label>
+                         </div>
+                </div>
+                    <div class="col-md-6">
+                            <div class="form-label-group">
+                            <input type="text" id="nationalid" name="nationalid" class="form-control" placeholder="nationalid" required="required">
+                            <label for="nationalid">National Id</label>
+                         </div>
+                </div>
+              </div>
+        </div>
+        <div class="col-md-12 text-center">
+                <button class="btn btn-success">Submit</button>
+
+        </div>
+
+    </form>
+  </ol>
+</div>
+
+<!-- Configure a few settings and attach camera -->
+
+<script language="JavaScript">
+
+    Webcam.set({
+
+        width: 270,
+
+        height: 210,
+
+        image_format: 'jpeg',
+
+        jpeg_quality: 90
+
+    });
+
+
+    Webcam.attach( '#my_camera' );
+
+    $count=0;
+    function take_snapshot() {
+
+        Webcam.snap( function(data_uri) {
+
+            $(".image-tag").val(data_uri);
+
+            document.getElementById('results').innerHTML = '<img src="'+data_uri+'"/>';
+
+        } );
+
+    }
+
+</script>
+
+ <!-- /.container-fluid -->
+{% endblock %}

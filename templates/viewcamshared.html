@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block content %}
+ <!-- Breadcrumbs-->
+          <style>
+            #container {
+            margin: 0px ;
+            width: 270px;
+            height: 210px;
+            border: 10px #333 solid;
+            }
+
+            #videoElement {
+            width: 500px;
+            height: 375px;
+            background-color: #666;
+            }
+           </style>
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item">
+              <a href="{{ url_for('index')}}">Dashboard</a>
+            </li>
+            <li class="breadcrumb-item active">Shared Camera</li>
+          </ol>
+          <b>Shared Videos</b>
+
+          <ol class="breadcrumb">
+           {% for camshared in sharedcameras %}
+             <div id="container" resize="both">
+                <img src="{{ url_for('video_feed' , name=camshared)}}"  width="640" hight="480" border="5">
+            </div>
+           {% endfor %}
+          </ol>
+
+ <!-- /.container-fluid -->
+{% endblock %}

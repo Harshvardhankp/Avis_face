@@ -1,0 +1,97 @@
+{% extends 'base.html' %}
+
+
+{% block sidebarcontent %}
+ <!-- Breadcrumbs-->
+
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> 
+ <!--Progress bar-->
+
+
+
+
+
+<div id="wrapper">
+
+      <!-- Sidebar -->
+      <ul class="sidebar navbar-nav">
+	<div class="sidebar" style="width:25%">
+  		<a class="active" href="#contact">OBSERVATIONS</a>
+		
+		</div>
+
+{% endblock %}
+
+{% block content %}
+ <!-- Breadcrumbs-->
+    <style>
+
+
+div.b {
+  position: absolute;
+  right: 0;
+  width: 500px;
+  height: 800px;
+  border: 3px solid black;
+} 
+
+ #container2 {
+            margin: 10px ;
+            width: 350px;
+            height: 740px;
+            border: 5px #333 solid;
+            background-color: #666;
+            }
+            #container {
+            margin: 30px ;
+            width: 1160px;
+            height: 655px;
+            border: 5px #333 solid;
+            background-color: #666;
+            }
+           
+            #hr {
+            display: block;
+            margin-top: 0.0em;
+            margin-bottom: 0.0em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 5px;
+            background-color: #666;
+            }
+
+
+            </style>
+
+
+
+    <div>
+       <hr id="hr">
+        <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+            <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+             <ul class="navbar-nav ml-auto ml-md-0">
+               </li>
+      </ul>
+            </form>
+        </nav>
+         <ol class="breadcrumb">
+      <!-- Page Content -->
+              <div id="container" >
+                   <img src=" {{url_for('video_feed_video' , name=camnm)}}"  width="1150" hight="750" border="10"  resize="both">
+              </div>
+
+          </ol>
+
+    </div>
+<div>
+
+
+
+
+</div>
+
+
+{% endblock %}

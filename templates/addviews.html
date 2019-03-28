@@ -1,0 +1,296 @@
+
+
+{% extends 'base.html' %}
+
+
+
+
+
+{% block sidebarcontent %}
+<style>
+    #hr3{
+            display: block;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 1px;
+            background-color: #666;
+            height: 210px;
+            overflow-y: scroll;
+            overflow-x: scroll;
+            }
+</style>
+
+<li class="nav-item dropdown" >
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"    aria-haspopup="true" aria-expanded="false" >
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Server</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown"  >
+              <div id="hr3">
+               {% for cam in cameras %}
+                 <a class="dropdown-item" id="{{cam}}"  draggable="true" ondragstart="drag(event)"  href="{{ url_for('viewsinglecam',camname=cam)}}">{{cam}}</a>
+               {% endfor %}
+              </div>
+          </div>
+        </li>
+
+
+
+
+{% endblock %}
+
+{% block content %}
+<script>
+var count=0;
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+
+    ev.preventDefault();
+    var cam = ev.dataTransfer.getData("text");
+    document.getElementById("output").innerHTML =cam.toLowerCase();
+    document.getElementById("output").innerHTML =count;
+     count=count+1;
+
+    if (count <=6){
+
+    var img = document.createElement("img");
+    img.hight="210"
+    img.width="250"
+    cam=cam.toLowerCase()
+    img.src = "{{url_for('video_feed' , name='camname')}}".replace("camname", cam);
+
+
+    targeele=document.getElementById(ev.target.id);
+    ev.target.appendChild(img);
+    document.getElementById("output").innerHTML =ev.target.id;
+
+    if (ev.target.id==="container"){
+
+           vari=document.getElementById("cam1")
+           vari.value=cam;
+    }
+    if (ev.target.id==="container2"){
+           vari=document.getElementById("cam2")
+           vari.value=cam;
+    }
+    if (ev.target.id==="container3"){
+           vari=document.getElementById("cam3")
+           vari.value=cam;    }
+
+    if (ev.target.id==="container4"){
+           vari=document.getElementById("cam4")
+           vari.value=cam;
+    }
+    if (ev.target.id==="container5"){
+           vari=document.getElementById("cam5")
+           vari.value=cam;
+    }
+    if (ev.target.id==="container6"){
+           vari=document.getElementById("cam6")
+           vari.value=cam;
+    }
+
+    } else {
+     document.getElementById("output").innerHTML ="Max 6 Cameras per view";
+
+    }
+
+
+}
+
+
+</script>
+    <style>
+    #hr3{
+            display: block;
+            margin-top: auto;
+            margin-bottom: auto;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 1px;
+            background-color: #666;
+            overflow-y: scroll;
+            overflow-x: scroll;
+            }
+            #container{
+            margin: 0px ;
+            width: 300px;
+            height: 210px;
+            border: 13px #333 solid;
+            background-color: #666;
+            }
+            #container2 {
+            margin: 0px ;
+            width: 300px;
+            height: 210px;
+            border: 13px #333 solid;
+            background-color: #666;
+            }
+            #container3 {
+            margin: 0px ;
+            width: 270px;
+            height: 210px;
+            border: 13px #333 solid;
+            background-color: #666;
+            }
+
+            #container4 {
+            margin: 0px ;
+            width: 300px;
+            height: 210px;
+            border: 13px #333 solid;
+            background-color: #666;
+            }
+             #container5{
+            margin: 0px ;
+            width: 300px;
+            height: 210px;
+            border: 13px #333 solid;
+            background-color: #666;
+            }
+            #container6 {
+            margin: 0px ;
+            width: 270px;
+            height: 210px;
+            border: 13px #333 solid;
+            background-color: #666;
+            }
+
+            #hr {
+            display: block;
+            margin-top: 0.0em;
+            margin-bottom: 0.0em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 5px;
+            background-color: #666;
+            }
+
+#hd{
+  visibility:hidden;
+}
+
+            </style>
+
+ <!-- Breadcrumbs-->
+
+         <ol class="breadcrumb">
+      <!-- Page Content -->
+          <form action="/savecamview" method="POST">
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-3">
+                  <div class="form-label-group">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="View name" required="required" autofocus="autofocus">
+                    <label for="name">View name</label>
+
+                  </div>
+
+                </div>
+                 <div class="col-md-3">
+                  <div class="form-label-group">
+                      <input type="submit" value="Save" class="btn btn-primary btn-large btn-block" >
+
+
+                  </div>
+
+                </div>
+
+
+              </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-3">
+                  <div class="form-label-group">
+
+                      <div id="container" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+                  </div>
+                </div>
+                    <div class="col-md-3">
+                        <div class="form-label-group">
+
+                     <div id="container2" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+                  </div>
+                </div>
+                    <div class="col-md-3">
+                        <div class="form-label-group">
+
+                                <div id="container3" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="form-group">
+                <div class="form-row">
+                    <div class="col-md-3">
+                  <div class="form-label-group">
+
+                     <div id="container4" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+                  </div>
+                </div>
+                     <div class="col-md-3">
+                  <div class="form-label-group">
+
+                     <div id="container5" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+                  </div>
+                </div>
+                     <div class="col-md-3">
+                     <div class="form-label-group">
+
+                       <div id="container6" ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+                  </div>
+                </div>
+
+            </div>
+                <div id="hd">
+                     <input type="text" id="cam1"  visibility="hidden" name="cam1" class="form-control" placeholder="cam1" required="required" autofocus="autofocus">
+                    <input type="text" id="cam2" visibility="hidden" name="cam2" class="form-control" placeholder="cam2" required="required" autofocus="autofocus">
+                    <input type="text" id="cam3" visibility="hidden" name="cam3" class="form-control" placeholder="cam3" required="required" autofocus="autofocus">
+                    <input type="text" id="cam4" visibility="hidden" name="cam4" class="form-control" placeholder="cam4" required="required" autofocus="autofocus">
+                    <input type="text" id="cam5" visibility="hidden" name="cam5" class="form-control" placeholder="cam5" required="required" autofocus="autofocus">
+                    <input type="text" id="cam6" visibility="hidden" name="cam6" class="form-control" placeholder="cam6" required="required" autofocus="autofocus">
+
+                    </div>
+            </div>
+          </form>
+
+          </ol>
+
+
+<p id="output"></p>
+ <!-- Breadcrumbs-->
+
+<hr>
+
+
+<hr>
+
+
+
+
+
+
+
+
+
+{% endblock %}

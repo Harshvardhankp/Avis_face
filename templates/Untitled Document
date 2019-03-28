@@ -1,0 +1,37 @@
+ <div id="container"  width=180px hight=180px ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="container2"  width=180px hight=180px ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="container3"  width=180px hight=180px ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="container4"  width=180px hight=180px ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+            <div id="container5"  width=180px hight=180px ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+             <div id="container6"  width=180px hight=180px ondrop="drop(event)" ondragover="allowDrop(event)"></div>
+
+
+
+<script>
+function allowDrop(ev) {
+    ev.preventDefault();
+}
+
+function drag(ev) {
+    ev.dataTransfer.setData("text", ev.target.id);
+}
+
+function drop(ev) {
+    ev.preventDefault();
+    var cam = ev.dataTransfer.getData("text");
+
+    var img = document.createElement("img");
+    img.src =Flask.url_for('video_feed' , name=cam)
+
+    ev.target.appendChild(img);
+}
+
+
+</script>
+
+
+
+
+
+
+

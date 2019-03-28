@@ -1,0 +1,183 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+ img{
+ width: 70,
+ height: 40,
+}
+input[type=file]{
+padding:10px;
+background:#2d2d2d;}
+      
+	
+
+            #container {
+            margin: 10px ;
+            width: 100%;
+            height: auto;
+            border: 10px #333 solid;
+            background-color: #666;
+            }
+
+            #container2,container3 {
+            border:10px #333 solid;
+            margin: 10px ;
+            width: 100%;
+            height: auto;
+            background-color: #333;
+            }
+
+          
+            #heads{
+            width: auto;
+            height: auto;
+            border: 2px #333 solid;
+
+            }
+
+div.ex1 {
+	
+  background-color:#D7DBDD;
+  width: 1600px;
+  height: 1200px;
+  overflow: auto;
+}
+
+::placeholder {
+  color: red;
+  opacity: 1; /* Firefox */
+}
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+ color: red;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+ color: red;
+}
+            </style>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/webcamjs/1.0.25/webcam.min.js"></script>
+
+
+
+
+<div class="container">
+ <ol class="breadcrumb" id="heads">
+     <div >
+         <b>Camera Settings</b>
+     </div>
+  </ol>
+
+  <ol class="breadcrumb">
+      <form method="POST" id="container2" enctype="multipart/form-data" width=100% height=auto action="/CamSettings" method = "POST">
+	 <div class="form-group" >
+             <div class="form-group" >
+             <div class="row">
+                      <div class="col-md-6">
+                            <input type="hidden" name="image" class="image-tag">
+                            <div id="results"><font color="white">Select the camera File....</font></div>
+			 <input type=file name=file style="background-color:white; 
+              border: solid 4px #6E6E6E;
+              height: 60px; 
+              font-size:18px; 
+              vertical-align:15px;color:#bbb" 
+        onfocus="if(this.value == 'Job Title e.g. Assistant Manager') {
+                    this.value = '';
+                    this.style.color='#000';
+                 }  />
+                                  
+     </div>
+         <div class="col-md-12 text-center   ">
+         <p><input type = "submit" value="Upload"/></p>
+        </div>
+    </form>
+    </form>
+  </ol>
+</div>
+
+
+<script>
+
+function readURL(input) {
+            if (input.files && input.files[0]) {
+                var reader = new FileReader();
+
+                reader.onload = function (e) {
+                    $('#blah')
+                        .attr('src', e.target.result);
+                };
+
+                reader.readAsDataURL(input.files[0]);
+            }
+        }
+ 
+</script>
+
+
+
+   <div class="container">
+
+    <form>
+
+    <div class="mx-auto"  >
+       <div class="ex1">
+<TABLE BORDER="5"    WIDTH="50%"   CELLPADDING="24" CELLSPACING="25" ALIGN="CENTER"  >
+   <TR>
+      <TH COLSPAN="6" ALIGN="CENTER" ><BR><H3 ALIGN="CENTER"><b>CAMERA LIST</b></H3>
+    
+      </TH>
+   </TR>
+
+<TR  bgcolor="#FFFF00" ALIGN="right">
+	<TH>ID</TH>
+	<TH>CAMNAME</TH>
+	<TH>IP</TH>
+	<TH>LOCATION</TH>
+ 	<TH>TYPE</TH>
+      <TH>USRID</TH>
+       </TR>
+
+{% for res in result %}
+ <TR ALIGN="CENTER">
+   <TD class="c1">{{res[0] }}</TD>
+   <TD class="c2">{{res[1]}}</TD>
+   <TD class="c3">{{res[2]}}</TD>
+   <TD class="c4">{{res[3]}}</TD>
+  <TD class="c5">{{res[4]}}</TD>
+   <TD class="c6">{{res[5]}}</TD>
+ </TR>          
+{% endfor %}
+	
+</TABLE>
+</div>
+</div>
+
+
+</div>
+
+
+
+
+
+
+ <!-- /.container-fluid -->
+{% endblock %}
+
+
+
+
+
+
+
+
+
+
+
+
+

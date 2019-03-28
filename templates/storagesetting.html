@@ -1,0 +1,87 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<style>
+
+     #container2 {
+            margin: 20px ;
+            width: 500px;
+            height: 450px;
+            border: 10px #333 solid;
+            background-color: #333;
+            }
+
+            #hr {
+            display: block;
+            margin-top: 0.3em;
+            margin-bottom: 0.3em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 5px;
+            background-color: #666;
+            }
+
+</style>
+<div>
+
+
+    <div class="mx-auto"  >
+    <hr ><font size="8"><b>Storage Settings</b></font>
+    <div id="container2">
+    <form action="/savesettings" method="POST">
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input type="text" id="name" name="name" class="form-control" placeholder="First name" required="required" autofocus="autofocus">
+                    <label for="name">Name</label>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input type="text" id="ps" name="ps" class="form-control" placeholder="PrimaryStorage" required="required" autofocus="autofocus">
+                    <label for="ps">Primary Storage Path</label>
+                  </div>
+                </div>
+
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="form-label-group">
+                <input type="text" id="ss" name="ss" class="form-control" placeholder="secondary Storage" required="required">
+                <label for="ss">secondary Storage Path</label>
+              </div>
+                <div class="form-label-group">
+                <input type="text" id="ts" name="ts" class="form-control" placeholder="Third Storage" required="required">
+                <label for="ts">Third Storage Path</label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <div class="form-row">
+                <div class="col-md-6">
+                  <div class="form-label-group">
+                    <input type="mobile" id="dur" name ="dur" class="form-control" placeholder="mobile" required="required">
+                    <hr>
+                    <label for="dur">Storage Duration(Days)</label>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <input type="submit" value="Save" class="btn btn-primary btn-large btn-block" >
+
+    </form>
+
+  </div>
+</div>
+
+
+
+<!-- /.container-fluid -->
+{% endblock %}

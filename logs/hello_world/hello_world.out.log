@@ -1,0 +1,478 @@
+Imageio: 'ffmpeg-linux64-v3.3.1' was not found on your computer; downloading it now.
+Try 1. Download from https://github.com/imageio/imageio-binaries/raw/master/ffmpeg/ffmpeg-linux64-v3.3.1 (43.8 MB)
+Downloading: 8192/45929032 bytes (0.0%)475136/45929032 bytes (1.0%)1269760/45929032 bytes (2.8%)1916928/45929032 bytes (4.2%)2490368/45929032 bytes (5.4%)3104768/45929032 bytes (6.8%)3694592/45929032 bytes (8.0%)4341760/45929032 bytes (9.5%)4898816/45929032 bytes (10.7%)5513216/45929032 bytes (12.0%)6168576/45929032 bytes (13.4%)6815744/45929032 bytes (14.8%)7397376/45929032 bytes (16.1%)7987200/45929032 bytes (17.4%)8601600/45929032 bytes (18.7%)9166848/45929032 bytes (20.0%)9764864/45929032 bytes (21.3%)10338304/45929032 bytes (22.5%)10936320/45929032 bytes (23.8%)11550720/45929032 bytes (25.1%)12148736/45929032 bytes (26.5%)12697600/45929032 bytes (27.6%)13271040/45929032 bytes (28.9%)13852672/45929032 bytes (30.2%)14426112/45929032 bytes (31.4%)14999552/45929032 bytes (32.7%)15572992/45929032 bytes (33.9%)16187392/45929032 bytes (35.2%)16769024/45929032 bytes (36.5%)17326080/45929032 bytes (37.7%)17899520/45929032 bytes (39.0%)18530304/45929032 bytes (40.3%)19341312/45929032 bytes (42.1%)19488768/45929032 bytes (42.4%)21061632/45929032 bytes (45.9%)21479424/45929032 bytes (46.8%)21946368/45929032 bytes (47.8%)22847488/45929032 bytes (49.7%)23224320/45929032 bytes (50.6%)23732224/45929032 bytes (51.7%)24371200/45929032 bytes (53.1%)24977408/45929032 bytes (54.4%)25518080/45929032 bytes (55.6%)26124288/45929032 bytes (56.9%)26681344/45929032 bytes (58.1%)27222016/45929032 bytes (59.3%)27803648/45929032 bytes (60.5%)28336128/45929032 bytes (61.7%)28917760/45929032 bytes (63.0%)29548544/45929032 bytes (64.3%)30154752/45929032 bytes (65.7%)30720000/45929032 bytes (66.9%)31293440/45929032 bytes (68.1%)31883264/45929032 bytes (69.4%)32440320/45929032 bytes (70.6%)33013760/45929032 bytes (71.9%)33603584/45929032 bytes (73.2%)34250752/45929032 bytes (74.6%)34873344/45929032 bytes (75.9%)35512320/45929032 bytes (77.3%)36134912/45929032 bytes (78.7%)36798464/45929032 bytes (80.1%)37421056/45929032 bytes (81.5%)38019072/45929032 bytes (82.8%)38592512/45929032 bytes (84.0%)39182336/45929032 bytes (85.3%)39755776/45929032 bytes (86.6%)40361984/45929032 bytes (87.9%)40935424/45929032 bytes (89.1%)41558016/45929032 bytes (90.5%)42205184/45929032 bytes (91.9%)42991616/45929032 bytes (93.6%)43646976/45929032 bytes (95.0%)44277760/45929032 bytes (96.4%)44867584/45929032 bytes (97.7%)45498368/45929032 bytes (99.1%)45929032/45929032 bytes (100.0%)
+  Done
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+None
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+4
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+Error in Querying Camera details
+Error in Querying Camera details
+Error in Querying Camera details
+[(1, u'Default', u'119:120:121:122:123:124', 4), (2, u'FrontDesk', u'125:126:127:128:129:130', 4), (3, u'Test10', u'134:135:136:137:138:139', 4), (4, u'test20', u'134:137:149:123:138:131', 4)]
+select * from clients_camera
+<sqlite3.Cursor object at 0x7fbf8b9092d0>
+(119, u'cam4', u'http://192.168.0.110:8080/shot.jpg', u'4', u'http', 4)
+(120, u'cam5', u'http://192.168.0.110:8080/shot.jpg', u'4', u'http', None)
+(121, u'cam6', u'http://192.168.0.110:8080/shot.jpg', u'4', u'http', None)
+[(13, u'MySettings', u'/home/harsh/ML', u'/home/harsh/ML/AVIS_Face', u'/home/tl/xyz', u'45')]
+1545057532.45
+1545057532.75
+1545057533.06
+1545057533.36
+1545057533.66
+1545057533.96
+1545057534.26
+1545057534.56
+1545057534.86
+1545057535.16
+1545057535.46
+1545057535.76
+1545057536.06
+1545057536.36
+1545057536.66
+1545057536.96
+1545057537.26
+1545057537.57
+1545057537.87
+1545057538.17
+1545057538.47
+1545057538.77
+1545057539.07
+1545057539.37
+1545057539.67
+1545057539.97
+1545057540.27
+1545057540.57
+1545057540.87
+1545057541.17
+1545057541.48
+1545057541.78
+1545057542.08
+1545057542.38
+1545057542.68
+1545057542.98
+1545057543.28
+1545057543.58
+1545057543.88
+1545057544.18
+1545057544.48
+1545057544.78
+1545057545.08
+1545057545.38
+1545057545.68
+1545057545.99
+1545057546.29
+1545057546.59
+1545057546.89
+1545057547.19
+1545057547.49
+1545057547.79
+1545057548.09
+1545057548.39
+1545057548.69
+1545057548.99
+1545057549.29
+1545057549.59
+1545057549.89
+1545057550.2
+[(13, u'MySettings', u'/home/harsh/ML', u'/home/harsh/ML/AVIS_Face', u'/home/tl/xyz', u'45')]
+1545057550.5
+[(13, u'MySettings', u'/home/harsh/ML', u'/home/harsh/ML/AVIS_Face', u'/home/tl/xyz', u'45')]
+1545057550.8
+4
+[(3, u'Test10', u'134:135:136:137:138:139', 4)]
+[(3, u'Test10', u'134:135:136:137:138:139', 4)]
+Error in Querying Camera details
+Error in Querying Camera details
+Error in Querying Camera details
+Error in Querying Camera details
+Error in Querying Camera details
+Error in Querying Camera details
+[(1, u'Default', u'119:120:121:122:123:124', 4), (2, u'FrontDesk', u'125:126:127:128:129:130', 4), (3, u'Test10', u'134:135:136:137:138:139', 4), (4, u'test20', u'134:137:149:123:138:131', 4)]
+select * from clients_camera
+<sqlite3.Cursor object at 0x7fbf8b909500>
+(119, u'cam4', u'http://192.168.0.110:8080/shot.jpg', u'4', u'http', 4)
+(120, u'cam5', u'http://192.168.0.110:8080/shot.jpg', u'4', u'http', None)
+(121, u'cam6', u'http://192.168.0.110:8080/shot.jpg', u'4', u'http', None)
+4
+[(4, u'test20', u'134:137:149:123:138:131', 4)]
+[(4, u'test20', u'134:137:149:123:138:131', 4)]
+Error in Querying Camera details
+Error in Querying Camera details
+Error in Querying Camera details
+Error in Querying Camera details
+Error in Querying Camera details
+Error in Querying Camera details
+[(1, u'Default', u'119:120:121:122:123:124', 4), (2, u'FrontDesk', u'125:126:127:128:129:130', 4), (3, u'Test10', u'134:135:136:137:138:139', 4), (4, u'test20', u'134:137:149:123:138:131', 4)]
+select * from clients_camera
+<sqlite3.Cursor object at 0x7fbf8b909570>
+(119, u'cam4', u'http://192.168.0.110:8080/shot.jpg', u'4', u'http', 4)
+(120, u'cam5', u'http://192.168.0.110:8080/shot.jpg', u'4', u'http', None)
+(121, u'cam6', u'http://192.168.0.110:8080/shot.jpg', u'4', u'http', None)
+4
+select * from clients_camera
+<sqlite3.Cursor object at 0x7fbf8b9095e0>
+cam4
+cam5
+cam6
+[(13, u'MySettings', u'/home/harsh/ML', u'/home/harsh/ML/AVIS_Face', u'/home/tl/xyz', u'45')]
+1545057567.39
+1545057567.69
+1545057567.99
+1545057568.3
+1545057568.6
+1545057568.9
+1545057569.2
+1545057569.5
+1545057569.8
+1545057570.1
+1545057570.4
+1545057570.7
+1545057571.0
+1545057571.3
+1545057571.6
+1545057571.91
+1545057572.21
+1545057572.51
+1545057572.81
+1545057573.11
+1545057573.41
+1545057573.71
+1545057574.01
+1545057574.31
+1545057574.61
+1545057574.91
+1545057575.21
+1545057575.51
+1545057575.81
+1545057576.12
+1545057576.42
+1545057576.pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+[(13, u'MySettings', u'/home/harsh/ML', u'/home/harsh/ML/AVIS_Face', u'/home/tl/xyz', u'45')]
+1545057604.88
+1545057605.18
+1545057605.49
+1545057605.79
+[(13, u'MySettings', u'/home/harsh/ML', u'/home/harsh/ML/AVIS_Face', u'/home/tl/xyz', u'45')]
+1545057606.09
+cam4
+cam5
+cam5
+cam6
+cam5
+cam4
+None
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+Error in Querying Camera details
+Error in Querying Camera details
+Error in Querying Camera details
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+[(13, u'MySettings', u'/home/harsh/ML', u'/home/harsh/ML/AVIS_Face', u'/home/tl/xyz', u'45')]
+1545127495.89
+None
+select * from clients_camera
+<sqlite3.Cursor object at 0x7fa7fba765e0>
+cam4
+cam5
+cam6
+None
+None
+select * from clients_camera
+<sqlite3.Cursor object at 0x7fa7fba23030>
+cam4
+cam5
+cam6
+None
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+Error in Querying Camera details
+Error in Querying Camera details
+Error in Querying Camera details
+None
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+Error in Querying Camera details
+Error in Querying Camera details
+Error in Querying Camera details
+None
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+Error in Querying Camera details
+Error in Querying Camera details
+Error in Querying Camera details
+None
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+Error in Querying Camera details
+Error in Querying Camera details
+Error in Querying Camera details
+None
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+Error in Querying Camera details
+Error in Querying Camera details
+Error in Querying Camera details
+None
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+Error in Querying Camera details
+Error in Querying Camera details
+Error in Querying Camera details
+None
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+Error in Querying Camera details
+Error in Querying Camera details
+Error in Querying Camera details
+None
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+Error in Querying Camera details
+Error in Querying Camera details
+Error in Querying Camera details
+None
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+Error in Querying Camera details
+Error in Querying Camera details
+Error in Querying Camera details
+None
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+[(1, u'Default', u'119:120:121:122:123:124', 4)]
+Error in Querying Camera details
+Error in Querying Camera details
+Error in Querying Camera details
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html
+pygame 1.9.4
+Hello from the pygame community. https://www.pygame.org/contribute.html

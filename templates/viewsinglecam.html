@@ -1,0 +1,78 @@
+{% extends 'base.html' %}
+
+
+{% block sidebarcontent %}
+<style>
+    #container3,container4 {
+            margin: 0px ;
+            width: 40px;
+            height: 40px;
+            border: 10px #333 solid;
+            background-color: #666;
+            }
+
+</style>
+ <!-- Breadcrumbs-->
+
+
+{% endblock %}
+
+{% block content %}
+ <!-- Breadcrumbs-->
+    <style>
+            #container {
+            margin: 10px ;
+            width: 530px;
+            height: 400px;
+            border: 5px #333 solid;
+            background-color: #666;
+            }
+            #container2 {
+            margin: 0px ;
+            width: 270px;
+            height: 210px;
+            border: 13px #333 solid;
+            background-color: #666;
+            }
+
+            #hr {
+            display: block;
+            margin-top: 0.0em;
+            margin-bottom: 0.0em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 5px;
+            background-color: #666;
+            }
+
+
+            </style>
+    <div>
+       <hr id="hr">
+        <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+            <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+             <ul class="navbar-nav ml-auto ml-md-0">
+        <li class="nav-item">
+                  <li class="nav-item">
+          <a class="nav-link" href="{{ url_for('camview',viewname='Default')}}">
+            <i class="fas fa-reply fa-report"></i>
+            <span>Return</span></a>
+        </li>
+
+
+        </li>
+      </ul>
+            </form>
+        </nav>
+         <ol class="breadcrumb">
+      <!-- Page Content -->
+              <div id="container" >
+                   <img src=" {{url_for('video_feed' , name=camnm)}}"  width="520" hight="150" border="10"  resize="both">
+              </div>
+
+          </ol>
+
+    </div>
+
+{% endblock %}

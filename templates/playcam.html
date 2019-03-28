@@ -1,0 +1,171 @@
+{% extends 'base.html' %}
+
+
+{% block sidebarcontent %}
+<style>
+#hr3{
+            display: block;
+            margin-top: 0.0em;
+            margin-bottom: 0.0em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 5px;
+            background-color: #666;
+            height: 150px;
+            overflow-y: scroll;
+            overflow-x: scroll;
+            }
+#hr4{
+            display: block;
+            margin-top: 0.0em;
+            margin-bottom: 0.0em;
+            margin-left: auto;
+            margin-right: auto;
+            border-style: inset;
+            border-width: 5px;
+            background-color: #666;
+            height: 200;
+            overflow-y: scroll;
+            overflow-x: scroll;
+            }
+</style>
+ <!-- Breadcrumbs-->
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown2" role="button" data-toggle="dropdown"    aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Views</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown" >
+              <div id="hr4">
+               {% for view in camviews %}
+                 <a class="dropdown-item" href="{{ url_for('camplay',viewname=view)}}">{{view}}</a>
+               {% endfor %}
+              </div>
+
+        </div>
+        </li>
+        <!---This is for list of cameras commented for now. will e visited in future </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="pagesDropdown" role="button" data-toggle="dropdown"    aria-haspopup="true" aria-expanded="false">
+            <i class="fas fa-fw fa-folder"></i>
+            <span>Server</span>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="pagesDropdown" id="hr3">
+               {% for cam in cameras %}
+                 <a class="dropdown-item" href="{{ url_for('viewsinglecam',camname=cam)}}">{{cam}}</a>
+               {% endfor %}
+
+
+          </div>
+        </li>
+        --->
+{% endblock %}
+
+{% block content %}
+ <!-- Breadcrumbs-->
+    <style>
+            #container {
+            margin: 5px ;
+            width: 270px;
+            height: 220px;
+            border: 10px #333 solid;
+            background-color: #666;
+            }
+
+            #container2,container3 {
+            margin: 0px ;
+            width: 270px;
+            height: 210px;
+            border: 10px #333 solid;
+            background-color: #333;
+            }
+
+            # hr,hr1 {
+            display: block;
+            margin-top: 0.0em;
+            margin-bottom: 0.0em;
+            margin-left:  auto;
+            margin-right: auto;
+            width:300px;
+            border: 10px;
+            border-style: inset;
+            border-width: 5px;
+            background-color: #336;
+
+            }
+
+
+
+            </style>
+
+    <div>
+        <div>
+                 <form class="d-none d-md-inline-block form-inline ml-auto mr-0 mr-md-3 my-2 my-md-0">
+                    <ul class="navbar-nav ml-auto ml-md-0">
+                        <li class="nav-item">
+                            <span > <font > <b>Recorded View : {{NameView}}</b></font></span></a>
+
+                        </li>
+                    </ul>
+                 </form>
+              </div>
+        <div>
+
+        <nav class="navbar navbar-expand navbar-dark bg-dark static-top">
+                <form id="form" action="/searchvideo"  method="POST">
+                    <input type="hidden" id="viewname" name="viewname" class="form-control"  required="required" value="{{NameView}}"   >
+                    <label  for="sdate"><font color="white">Date</font></label>
+                    &nbsp&nbsp<input type="date" id="sdate" name="sdate" value=""/>
+                    &nbsp&nbsp <label  for="sdate"><font color="white">Time</font></label>
+                    &nbsp &nbsp<input type="time" id="stime" name="stime" name="usr_Stime" required="required" >
+                    &nbsp &nbsp <label  for="sdate"><font color="white">To</font></label>
+                    &nbsp&nbsp<input type="time" id="etime" name="etime" name="usr_Etime" required="required" >
+                </form>
+                    &nbsp&nbsp&nbsp&nbsp&nbsp&nbsp<button type="submit" form="form"  value="Submit">Show</button>
+
+
+                   <a href="{{ url_for('downloadvideo',view=NameView)}}" >
+                    <i class="fas fa-cloud-download-alt fa-report"></i>
+                    <span>Download</span></a>
+        </nav>
+        </div>
+
+        <ol class="breadcrumb">
+      <!-- Page Content -->
+           {% for viewcam in videolist %}
+              <div id="container" >
+
+                      <video id="myVideo" width="240" hight="200 " autoplay controls>
+                          <source id="ss" src={{viewcam}} type="video/mp4">
+
+                      </video>
+
+
+              </div>
+           {% endfor %}
+
+             <script type="text/js" >
+                function run(videoid,sor){
+                    x=document.getElementById(videoid);
+                        x.setAttribute("src",sor);
+                        x.setAttribute("width", "320");
+                        x.setAttribute("height", "240");
+                        x.setAttribute("controls", "controls");
+                        document.body.appendChild(x);
+                    x.load()
+                    x.play();
+
+               }
+
+            </script>
+
+          </ol>
+
+    </div>
+
+
+
+{% endblock %}
