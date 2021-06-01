@@ -89,7 +89,7 @@ termcolor
 tqdm
 typing
 unity-lens-photos
-urllib3==1.23virtualenv
+urllib3==1.26.5
 virtualenv-clone
 virtualenvwrapper
 visitor
